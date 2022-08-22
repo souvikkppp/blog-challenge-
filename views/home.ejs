@@ -3,8 +3,8 @@
 <p><%= homeStartingContent %></p>
 
 <% posts.forEach((post) => { %>
-<h1><%= post.title %></h1>  
-<p><%= post.post %></p>
+<h1><%= post.title.substring(0, 100) %></h1>
+<p><%= post.post.substring(0, 100) + "..." %><a href="/posts/<%= post.title %>">Read more.</a></p>
 <% console.log(post.title); %>
 <% }); %>
 

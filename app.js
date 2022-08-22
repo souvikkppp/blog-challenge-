@@ -34,7 +34,10 @@ let reqParams = _.upperCase(req.params.story);
     let postTitle = _.upperCase(post.title);
 
     if (postTitle === reqParams) {
-      console.log("match found");
+      res.render("post", {
+        title: post.title,
+        post: post.post
+      })
     } else {
       console.log("not found");
     }
